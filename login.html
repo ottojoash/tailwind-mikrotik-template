@@ -2,16 +2,31 @@
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
-		<title>Company Wi-fi > login</title>
+		<title>Peniel Beach Hotel Wi-fi > login</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="pragma" content="no-cache" />
 		<meta http-equiv="expires" content="-1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="shortcut icon" type="image/png" href="img/logo.png"/>
 		<link rel="stylesheet" type="text/css" media="all" href="css/tailwind.min.css">
+
+		<style>
+			/* Set the background image for the page */
+			section {
+				background-image: url('img/background.jpg'); /* Replace with your background image path */
+				background-size: cover;
+				background-position: center;
+			}
+
+			/* Make the form container transparent */
+			.form-container {
+				background: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+				backdrop-filter: blur(10px); /* Optional: Add a blur effect for a frosted glass effect */
+			}
+		</style>
 	</head>
 	<body>
-		<section class="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+		<section class="min-h-screen flex flex-col items-center justify-center">
 			$(if chap-id)
 				<form name="sendin" action="$(link-login-only)" method="post">
 					<input type="hidden" name="username" />
@@ -33,13 +48,13 @@
 				</script>
 			$(endif)
 
-
-			<div class=" flex flex-col border-gray-200 bg-white border px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-lg w-50 max-w-md">
+			<!-- Form container with transparency applied -->
+			<div class="form-container flex flex-col border-gray-200 border px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-lg w-50 max-w-md">
 				<div class="items-center flex justify-center">
-					<img src="img/logo.png" alt="Home" class="h-auto w-2/3" />
+					<img src="img/logo_transparent.png" alt="Home" class="h-auto w-2/5" />
 				</div>
 				<div class="w-full text-center my-2">
-					<p class="text-gray-600 text-sm">Please log on to use the hotspot service.</p>
+					<p class="text-gray-600 text-sm">Please log on to use the WI-FI service.</p>
 					$(if error)
 						<div class="text-red-500 text-sm">$(error)</div>
 					$(endif)
